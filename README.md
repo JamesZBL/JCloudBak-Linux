@@ -67,13 +67,9 @@ mvn package -Dmaven.test.skip=true
 #### 3.部署运行
 
 
-批处理脚本实现后台进程（无 cmd 窗口）方式
+批处理脚本实现后台进程方式
 
 ```
-@echo off
-   
-start javaw -Xmx100m -Xms10m -jar app.jar
-
-exit
+java -Xmx100m -Xms10m -jar app.jar &
 ```
 
